@@ -1,0 +1,27 @@
+<program> ::= PROGRAM IDENT <compoundstatement> END PROGRAM
+
+<compoundstatement> ::= <statement>+
+
+<statement> ::= <setstatement> | <printstatement> | <whilestatement> | 	<ifstatement> | <forstatement>
+
+<setstatement> ::= SET IDENT ASSIGN <expression>
+
+<printstatement> ::= PRINT <printExpression> ( COMMA <printExpression> )*
+
+<printExpression> ::= ( <expression> | STRLIT )
+
+<whilestatement> ::= WHILE <logicalexpression> DO <compoundstatement> END
+
+<ifstatement> ::= IF <logicalexpression> THEN <compoundstatement> [ELSE <compoundstatement>] ENDIF
+
+<forstatement> ::= FOR IDENT ASSIGN <expression> TO <expression> <compoundstatement> END
+
+<logicalexpression> ::= <relationalexpression> ( AND <relationalexpression> | OR <relationalexpression> )*
+
+<relationalexpression> ::= <expression> ( EQ <expression> | LT <expression> | LE <expression> | GT <expression> | GE <expression> | NE <expression> )*
+
+<expression> ::= <term> ( PLUS <term> | MINUS <term> )*
+
+<term> ::=  <factor> ( TIMES <factor> | DIVIDE <factor>  | REM <factor> )*
+
+<factor> ::= LPAREN <expression> RPAREN | INTLIT | FLOATLIT | IDENT

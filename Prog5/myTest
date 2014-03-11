@@ -1,0 +1,7 @@
+#Im a comment but nah chill bro codes still going to work. Bet money.#
+program myTest
+set x = 10
+while x < 20 do
+  set x = x + 1
+end
+end program

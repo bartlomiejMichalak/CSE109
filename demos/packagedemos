@@ -1,0 +1,5 @@
+fname="demos-`date '+%y-%m-%d'`.zip" 
+
+zip -r $fname demos
+
+echo 'Here are the demos' | mutt -a $fname -s "Demo zip file" jaf207

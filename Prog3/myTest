@@ -1,0 +1,5 @@
+#Im a comment but nah chill bro codes still going to work. Bet money.#
+set x = 10
+while (x < 20) do
+  set x = x + 0x
+end
